@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Disk</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            color: #333;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            margin-right: 10px;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            border: none;
+            color: #fff;
+            background-color: #007bff;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Select a Disk to Scan</h1>
+        <form action="/start_scan" method="post">
+            {% for drive in drives %}
+                <div class="form-group">
+                    <input type="radio" name="drive" value="{{ drive }}" id="{{ drive }}">
+                    <label for="{{ drive }}">{{ drive }}</label>
+                </div>
+            {% endfor %}
+            <input type="submit" value="Start Scan">
+        </form>
+    </div>
+</body>
+</html>
