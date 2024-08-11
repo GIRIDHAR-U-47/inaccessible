@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antivirus Scanner</title>
+</head>
+<body>
+    <h1>Welcome to the Antivirus Scanner</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <label for="file">Select files to scan:</label>
+        <input type="file" name="file" id="file" multiple>
+        <input type="submit" value="Scan Files">
+    </form>
+    <br>
+    <form action="/scan_device" method="post">
+        <input type="submit" name="scan_type" value="Scan Device">
+        <input type="submit" name="scan_type" value="Disk Select">
+    </form>
+</body>
+</html>

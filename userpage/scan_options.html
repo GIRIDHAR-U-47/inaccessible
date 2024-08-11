@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Scan Option</title>
+</head>
+<body>
+    <h1>Select Scan Option</h1>
+    <form action="/scan_device" method="post">
+        <input type="radio" name="scan_type" value="whole_scan" id="whole_scan">
+        <label for="whole_scan">Scan Entire Device</label><br>
+        <input type="radio" name="scan_type" value="disk_select" id="disk_select">
+        <label for="disk_select">Select Specific Disk</label><br>
+        <input type="submit" value="Proceed">
+    </form>
+</body>
+</html>

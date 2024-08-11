@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scan Results</title>
+</head>
+<body>
+    <h1>Scan Results</h1>
+    <pre>{{ result }}</pre>
+    <h2>Total Scan Time: {{ total_time }} seconds</h2>
+    <img src="{{ url_for('static', filename='scan_times.png') }}" alt="Scan Times Graph">
+</body>
+</html>

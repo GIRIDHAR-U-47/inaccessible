@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Disk</title>
+</head>
+<body>
+    <h1>Select a Disk to Scan</h1>
+    <form action="/scan_device" method="post">
+        {% for drive in drives %}
+            <input type="radio" name="drive" value="{{ drive }}" id="{{ drive }}">
+            <label for="{{ drive }}">{{ drive }}</label><br>
+        {% endfor %}
+        <input type="submit" value="Start Scan">
+    </form>
+</body>
+</html>
